@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script>
+$(document).ready(function(){
+  $(".close").click(function(){
+ 	$('.imgDiv').css('display', 'none');
+    $('.disImg').css('display', 'block');
+  });
+   $(".open").click(function(){
+ 	$('.imgDiv').css('display', 'block');
+    $('.disImg').css('display', 'none');
+  });
+$('.closechat').click(function(){
+$('#binddiv').css('display', 'none');
+});
+});
+</script>
+<style>
+.close{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+img {
+  position: relative;
+  width: 100%;
+}
+.myDiv {
+ 
+  background-color: lightblue;    
+  text-align: center;
+}
+
+.co-banner h2.c-white {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+.co-banner a h2.c-white {
+     text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 18px;
+}
+.co-banner h3.c-yell {
+    color: #ffe600;
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    padding: 0px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+.co-banner h2.c-num {
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 15px;
+    margin-bottom: 0;
+}
+.co-banner h3.c-19 {
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    padding:5px 0px 0px;
+    margin:15px 0 0px;
+}
+.co-banner span.state{
+ font-size: 8px;
+    text-align: center;
+    font-weight: bold;
+   color:#fff;
+    text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.co-banner h4.vmap {
+    font-size: 8px;
+    text-align: center;
+    color: #ffe600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.co-banner {
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+    display: block;
+    z-index: 99999;
+    width: 0;
+}
+
+.co-banner .back h2 {
+    text-align: center;
+    color: #fff;
+}
+.rotate-banner {
+ position: relative;
+
+}
+.co-banner .closexcube {
+ bottom: 22px;
+ display: inline-block;
+ position: absolute;
+ left: 110px;
+ background: #4e4e4e;
+ padding: 5px;
+ border-radius: 50%;
+ width: 20px;
+cursor: pointer;
+}
+.co-banner .closexcube img {
+ float: left;
+ display: inline-block;
+ width: 10px;
+}
+.co-banner .cube a{text-decoration:none;}
+
+@keyframes spin-horizontal {
+ 0% {transform:rotateY(0deg);}
+ 13.33%, 23.32% {transform:rotateY(-90deg);}
+ 36.64%, 46.68% {transform:rotateY(-180deg);}
+ 70.01%, 75% {transform:rotateY(-270deg);}
+ 80%, 100%{transform:rotateY(-360deg);}
+}
+
+.co-banner .cube-wrap {
+-webkit-perspective: 440px;
+-webkit-perspective-origin: 50% 110px;
+-moz-perspective: 440px;
+-moz-perspective-origin: 50% 110px;
+-ms-perspective: 440px;
+-ms-perspective-origin: 50%;
+perspective: 440px;
+perspective-origin: 50% 110px;
+}
+.co-banner .cube {
+position: relative;
+width: 220px;
+margin: 0 auto;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+transform-style: preserve-3d
+}
+.co-banner .cube div {
+position: absolute;
+width: 110px;
+height: 110px;
+background: rgba(20, 59, 90, .65);
+border-radius: 50%;
+color: #fff;
+font-family: Arial;
+overflow: hidden;
+}
+.co-banner .depth div.back {
+text-align:center;
+transform: translateZ(-16px) rotateY(180deg);
+    background-image: linear-gradient(#241f55, #312c5f);
+
+}
+.co-banner .depth div.right {
+text-align:center;
+transform: rotateY(-284deg) translateX(55px);
+transform-origin: top right;
+    background-image: linear-gradient(#241f55, #312c5f);
+}
+.co-banner .depth div.left {
+text-align:center;
+transform: rotateY(270deg) translateX(-55px);
+transform-origin: center left;
+    background-image: linear-gradient(#241f55, #312c5f);
+}
+.co-banner .depth div.top {
+transform: rotateX(-90deg) translateY(-55px);
+transform-origin: top center;
+    background-image: linear-gradient(#241f55, #312c5f);
+}
+.co-banner .depth div.bottom {
+transform: rotateX(90deg) translateY(55px);
+transform-origin: bottom center;
+    background-image: linear-gradient(#241f55, #312c5f);
+}
+.co-banner .depth div.front {
+text-align:center;
+transform: translateZ(16px);
+    background-image: linear-gradient(#241f55, #312c5f);
+}
+
+.co-banner .cube-wrap.vertical .cube {
+margin: 100px auto;
+transform-origin: 55px 55px;
+animation: spin-horizontal 12s infinite;
+animation-timing-function: ease;
+}
+.co-banner .cube div img {
+ width: 100px;
+border-radius: 50%;
+ transform: translate(-50%,-50%);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ box-shadow: -1px 0px 5px #00000030;
+}
+.co-banner .cube-wrap.vertical .cube:hover {
+-webkit-animation-play-state: paused;
+-moz-animation-play-state: paused;
+-o-animation-play-state: paused;
+animation-play-state: paused;
+cursor: pointer
+}
+@media screen and (max-width: 567px) {
+
+.co-banner .cube-wrap {
+-webkit-perspective: 320px;
+-webkit-perspective-origin: 50% 80px;
+-moz-perspective: 320px;
+-moz-perspective-origin: 50% 80px;
+-ms-perspective: 320px;
+-ms-perspective-origin: 50%;
+perspective: 320px;
+perspective-origin: 50% 80px;
+}
+.cube {
+position: relative;
+width: 160px;
+margin: 0 auto;
+-webkit-transform-style: preserve-3d;
+-moz-transform-style: preserve-3d;
+-ms-transform-style: preserve-3d;
+transform-style: preserve-3d
+}
+.cube div {
+position: absolute;
+width: 80px;
+height: 80px;
+background: rgba(20, 59, 90, .65);
+color: #fff;
+font-family: Arial
+}
+.depth div.back {
+transform: translateZ(-40px) rotateY(180deg);
+/*background: rgba(41, 105, 176, .8)*/
+background-image: linear-gradient(#241f55, #312c5f);
+
+}
+.depth div.right {
+transform: rotateY(-270deg) translateX(40px);
+transform-origin: top right;
+background: #e6e6e1;
+}
+
+.depth div.top {
+transform: rotateX(-90deg) translateY(-40px);
+transform-origin: top center;
+ background-image: linear-gradient(#241f55, #312c5f);
+}
+.depth div.bottom {
+transform: rotateX(90deg) translateY(40px);
+transform-origin: bottom center;
+ background-image: linear-gradient(#241f55, #312c5f);
+}
+
+
+.cube-wrap.vertical .cube {
+margin: 100px auto;
+transform-origin: 40px 40px;
+animation: spin-horizontal 12s infinite;
+}
+.cube div img {
+ width: 100%;
+ height: 100%;
+ transform: translate(-50%,-50%);
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ box-shadow: -1px 0px 5px #00000030;
+}
+/*.co-banner {
+    position: fixed;
+    bottom: 173px;
+    left: 49px;
+    display: block;
+    z-index: 9999999;
+
+}*/
+.rotate-banner {
+ position: relative;
+ bottom: 100px;
+ right: -28px;
+ display: block;
+ z-index: 99999;
+}
+.closexcube {
+ bottom: 115px;
+ display: inline-block;
+ position: absolute;
+ left: 22px;
+ padding: 5px;
+ border-radius: 50%;
+
+}
+
+
+}
+
+@media screen and (min-device-width: 568px) and (max-device-width: 1024px) {
+
+.co-banner {
+    bottom: 0px;
+    left: 0px;
+}
+.closexcube {
+ left: -5px;
+}
+
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+.co-banner span.state {
+    font-size: 9px!important;
+}
+
+
+}
+
+@media screen and (min-width: 1025px) {
+.co-banner {
+    bottom: 161px;
+    left: 25px;
+}
+.closexcube {
+ left: -5px;
+}
+
+}
+
+.closexcube.chevron::before{
+
+}
+body{
+background-color: transparent;
+}
+.co-banner .closechat {
+    bottom: 24px;
+    display: inline-block;
+    position: absolute;
+    left: 110px;
+    background: #4e4e4e;
+    /* padding: 5px; */
+    border-radius: 50%;
+    width: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1;
+    /*height: 20px;*/
+    padding: 5px 0;
+}
+
+@media only screen and (max-width: 767px) {
+.co-banner h3.c-19{
+    font-size: 9px;
+    margin-top:8px;
+}
+.co-banner .cube div {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+.co-banner h2.c-num{
+    line-height: 11px;
+    }
+    .co-banner span.state{
+    font-size: 6px;
+
+    }
+    .co-banner .closechat {
+    bottom: 10px;
+}
+
+}
+</style>
+</head>
+<body>
+<div class="myDiv">
+  <h2>Heading for the Discription 1</h2>
+  <p>Some examples of descriptive text include: The sunset filled the entire sky with the deep color of rubies, setting the clouds ablaze. The waves crashed and danced along the shore, moving up and down in a graceful and gentle rhythm like they were dancing</p>
+</div>
+  <div class="imgDiv">
+    <button class="close" title="close Image">
+      <span>&times;</span>
+    </button>
+    <img src="https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg">
+  </div>
+  <div class="disImg" style="display:none"><button class="open">Display Image</button></div>
+<div class="myDiv">
+  <h2>Heading for the Discription 1</h2>
+  <p>Some examples of descriptive text include: The sunset filled the entire sky with the deep color of rubies, setting the clouds ablaze. The waves crashed and danced along the shore, moving up and down in a graceful and gentle rhythm like they were dancing</p>
+</div>
+<div id="binddiv">
+<div id="co-banner" class="co-banner">
+<div class="closechat"> X</div><div class="cube-wrap vertical"><div class="cube depth"><div class="left">
+<h3 class="c-19">JSon</h3>
+<a target="_parent" href="http://api.plos.org/search?q=title:DNA" class="btn c-num">click</a>
+<span class="state" style="font-size: 7px;margin-top: 5px;display: inline-block;margin-bottom: 25px;line-height: 1.6;"></div>
+<div class="front">
+<h3 class="c-19">Add</h3>
+<a target="_parent" class="btn c-num" href="https://www.google.com">Add</a>
+
+<span class="state" style="font-size: 8px;margin-top: 5px;display: inline-block;"></span> </div>
+<div class="back">
+
+<h3 class="c-19">Jquery</h3>
+<a target="_parent" href="https://medialize.github.io/URI.js/jquery-uri-plugin.html" class="btn c-num" id="download_state">
+click </a></div><div class="right">
+<h3 class="c-19">Java</h3>
+<a target="_parent" href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html" class="btn c-num" id="download_state">
+click </a>
+</div></div></div></div>
+</div>
+</div>
+
+</body>
+</html>
